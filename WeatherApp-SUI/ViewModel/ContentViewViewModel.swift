@@ -11,7 +11,20 @@ final class ContentViewViewModel {
     let networkClient = NetworkClient.shared
     
     init() {
+        fetchWeather()
+    }
+    
+    func fetchWeather(){
         networkClient.fetchCurrentWeather { result in
+            switch result {
+            case .success(let body):
+                print(body)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        networkClient.fetchForecast { result in
             switch result {
             case .success(let body):
                 print(body)

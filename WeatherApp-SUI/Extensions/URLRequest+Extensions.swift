@@ -19,7 +19,7 @@ extension URLRequest {
         url.append(queryItems: [
             URLQueryItem(name: "lat", value: Constants.lat),
             URLQueryItem(name: "lon", value: Constants.lon),
-            URLQueryItem(name: "apiid", value: Constants.apiid),
+            URLQueryItem(name: "appid", value: Constants.appid),
             URLQueryItem(name: "units", value: Constants.units)
         ])
         let request = URLRequest(url: url)

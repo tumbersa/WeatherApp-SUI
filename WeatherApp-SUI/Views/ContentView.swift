@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    let net = ContentViewViewModel()
+    
     @State private var isNight = false
     
     var body: some View {
